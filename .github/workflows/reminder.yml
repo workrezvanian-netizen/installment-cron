@@ -1,0 +1,13 @@
+name: Daily Installment Reminder
+
+on:
+  schedule:
+    - cron: '30 17 * * *'   # هر روز ساعت 17:30 UTC (تقریبا 21:00 ایران/ترکیه)
+  workflow_dispatch:         # اجازه میده دستی هم از تب Actions اجرا کنی
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Call reminder endpoint
+        run: curl -f "https://SORSER0098.pythonanywhere.com/api/cron/daily-push?token=123456789mamad987654321"
