@@ -2,7 +2,7 @@ name: Daily Installment Reminder
 
 on:
   schedule:
-    - cron: '30 17 * * *'   # هر روز ساعت 17:30 UTC (تقریبا 21:00 ایران/ترکیه)
+     - cron: '0 * * * *'
   workflow_dispatch:         # اجازه میده دستی هم از تب Actions اجرا کنی
 
 jobs:
